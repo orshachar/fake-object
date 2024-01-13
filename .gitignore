@@ -3,5 +3,8 @@
 /node_modules/
 lib/
 dist/
+coverage/
 moonshot-marketing-creator-api-shared-libraries-*.tgz
 .yalc
+.vscode/
+yalc.lock
