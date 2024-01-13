@@ -66,4 +66,4 @@ console.log(fakeObject);
 
 ## 🔑 License
 
-[MIT](https://github.com/orshachar/fake-object/LICENSE)
+[MIT](https://github.com/orshachar/fake-object/blob/main/LICENSE)
