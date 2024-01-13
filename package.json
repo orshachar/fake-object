@@ -14,10 +14,10 @@
     "release:local": "yarn build && yalc publish",
     "git:push": "git pull origin master && git add . && git commit -m \"creator-utils new libraries\" && git push origin master",
     "release": "yarn install && yarn build && yarn version --patch --no-git-tag-version && yarn publish --non-interactive && yarn git:push",
-    "test": "jest",
+    "test": "jest"
   },
   "dependencies": {
-    "jaccard": "^0.4.0",
+    "jaccard": "^0.4.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",

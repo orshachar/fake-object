@@ -4,7 +4,6 @@ const path = require('path');
 const { dirname } = require('path');
 const fakerInstance = faker;
 const jaccard = require('jaccard');
-const appDir = dirname(require.main.filename);
 // Use require.resolve to find the path of a file within @faker-js/faker
 const fakerPath = require.resolve('@faker-js/faker');
 
