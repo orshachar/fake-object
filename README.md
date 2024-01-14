@@ -19,10 +19,10 @@
 ## 📦 Install
 
 ```bash
-npm install --save-dev @orshachar/fake-object
+npm install --save-dev fake-object
 ```
 ```bash
-yarn add dev @orshachar/fake-object
+yarn add dev fake-object
 ```
 ## 🪄 Usage
 
