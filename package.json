@@ -3,8 +3,12 @@
     "name": "Or Shachar",
     "email": "orshachar23@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orshachar/fake-object"
+  },
   "name": "@orshachar/fake-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
