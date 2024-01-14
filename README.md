@@ -27,7 +27,7 @@ yarn add dev fake-object
 ## 🪄 Usage
 
 ```ts
-import { generateFakeObject } from '@orshachar/fake-object';
+import { generateFakeObject } from 'fake-object';
 
 const nestedObject = {
   name: 'John Doe',
