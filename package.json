@@ -8,7 +8,7 @@
     "url": "https://github.com/orshachar/fake-object"
   },
   "name": "fake-object",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -16,7 +16,6 @@
     "tslint": "tslint -c tslint.json -p tsconfig.json --fix",
     "release:only": "yarn build && yarn publish --patch",
     "release:local": "yarn build && yalc publish",
-    "git:push": "git pull origin master && git add . && git commit -m \"creator-utils new libraries\" && git push origin master",
     "release": "yarn install && yarn build && yarn version --patch --no-git-tag-version && yarn publish --non-interactive && yarn git:push",
     "test": "jest"
   },

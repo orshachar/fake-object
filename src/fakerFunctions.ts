@@ -1,26 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-function extractFullFunctionCallsFromCommentsOld(fileContent: string): string[] {
-    const exampleRegex = /@example\s*\*\s*(faker\.\w+\.\w+\(\))/gm;
-    let match: RegExpExecArray | null;
-    let fullFunctionCalls: string[] = [];
-
-    while ((match = exampleRegex.exec(fileContent)) !== null) {
-        fullFunctionCalls.push(match[1]);
-    }
-
-    return fullFunctionCalls;
-}
-
-function isDirectory(directoryPath: string, entry: string): boolean {
-    return fs.statSync(path.join(directoryPath, entry)).isDirectory();
-}
-
-function extractFunctionCallsAndReturnTypes(fileContent) {
+function extractFunctionCallsAndReturnTypes(fileContent: string): { [key: string]: any[] } {
     const methodRegex = /@example\s*\*\s*(faker\.\w+\.\w+\([^\)]*\))[^]*?\*\/[^]*?\w+\([^]*?\): (\w+);/gm;
     let match;
-    let groupedMethods = {};
+    let groupedMethods: { [key: string]: any[] } = {};
 
     while ((match = methodRegex.exec(fileContent)) !== null) {
         let fullMethodName = match[1]; // Extracts the full method name
@@ -45,11 +29,11 @@ function extractFunctionCallsAndReturnTypes(fileContent) {
     return groupedMethods;
 }
 
-export function processModulesDirectory(modulesDirectoryPath) {
-    const allMethodDetails = {};
+export function processModulesDirectory(modulesDirectoryPath: string) {
+    const allMethodDetails: { [key: string]: any[] } = {};
 
     const entries = fs.readdirSync(modulesDirectoryPath);
-    entries.forEach(entry => {
+    entries.forEach((entry: string) => {
         const entryPath = path.join(modulesDirectoryPath, entry);
         if (fs.statSync(entryPath).isDirectory()) {
             const indexPath = path.join(entryPath, 'index.d.ts');
