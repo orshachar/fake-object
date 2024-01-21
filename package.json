@@ -8,7 +8,7 @@
     "url": "https://github.com/orshachar/fake-object"
   },
   "name": "fake-object",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -19,12 +19,23 @@
     "release": "yarn install && yarn build && yarn version --patch --no-git-tag-version && yarn publish --non-interactive && yarn git:push",
     "test": "jest"
   },
+  "keywords": [
+    "fake-data",
+    "object-generation",
+    "data-mocking",
+    "typescript",
+    "testing-tools",
+    "mock-data",
+    "nested-objects",
+    "development-tools",
+    "data-simulation",
+    "javascript-utilities"
+  ],
   "dependencies": {
-    "jaccard": "^0.4.0",
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^7.6.0",
+    "jaccard": "^0.4.0"
   },
   "devDependencies": {
-   
     "@jest/globals": "^29.7.0",
     "@types/faker": "^6.6.9",
     "@types/jest": "^29.5.11",
